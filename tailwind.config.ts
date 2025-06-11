@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,15 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'vt323': ['VT323', 'monospace'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
+				'cyber-bg': '#0a0a0a',
+				'cyber-text': '#EAEAEA',
+				'cyber-neon': '#7FFF00',
+				'cyber-card': '#1E1E1E',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,6 +78,18 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'glow': {
+					'0%, 100%': { 
+						textShadow: '0 0 5px #7FFF00, 0 0 10px #7FFF00, 0 0 15px #7FFF00' 
+					},
+					'50%': { 
+						textShadow: '0 0 10px #7FFF00, 0 0 20px #7FFF00, 0 0 30px #7FFF00' 
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,8 +108,14 @@ export default {
 				}
 			},
 			animation: {
+				'glow': 'glow 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			dropShadow: {
+				'neon': '0 0 5px #7FFF00',
+				'neon-lg': '0 0 20px #7FFF00',
 			}
 		}
 	},
