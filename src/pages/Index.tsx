@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowUp, MessageCircle, Mail, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import MatrixRain from '../components/TechEffects/MatrixRain';
@@ -8,7 +7,8 @@ import CircuitPattern from '../components/TechEffects/CircuitPattern';
 import HolographicCard from '../components/TechEffects/HolographicCard';
 import GlitchText from '../components/TechEffects/GlitchText';
 import TypingText from '../components/TechEffects/TypingText';
-import AnimatedCounter from '../components/TechEffects/AnimatedCounter';
+import MetricCard from '../components/cards/MetricCard';
+import ServiceCard from '../components/cards/ServiceCard';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -66,8 +66,8 @@ const Index = () => {
           </div>
           
           <div className="mb-8">
-            <GlitchText className="font-vt323 text-cyber-neon text-5xl md:text-7xl lg:text-9xl leading-tight drop-shadow-neon-lg holographic-text">
-              LEO KOERICH
+            <GlitchText intensity="low" className="font-vt323 text-cyber-neon text-5xl md:text-7xl lg:text-9xl leading-tight drop-shadow-neon-lg">
+              <span className="holographic-text">LEO KOERICH</span>
             </GlitchText>
           </div>
           
@@ -87,7 +87,7 @@ const Index = () => {
       {/* About Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <GlitchText className="font-vt323 text-cyber-blue text-5xl md:text-6xl mb-6 drop-shadow-neon-blue">
+          <GlitchText intensity="low" className="font-vt323 text-cyber-blue text-5xl md:text-6xl mb-6 drop-shadow-neon-blue">
             Quem é Leo Koerich
           </GlitchText>
           <p className="text-center text-gray-400 text-lg max-w-3xl mx-auto">
@@ -139,7 +139,7 @@ const Index = () => {
               suffix="+"
               label="Ano de Experiência"
               sublabel="Em crescimento constante"
-              color="text-cyber-neon"
+              variant="neon"
             />
             <MetricCard 
               icon={<Users className="w-8 h-8" />}
@@ -147,7 +147,7 @@ const Index = () => {
               suffix="+"
               label="Empresas Atendidas"
               sublabel="Diversos segmentos"
-              color="text-cyber-blue"
+              variant="blue"
             />
             <MetricCard 
               icon={<Target className="w-8 h-8" />}
@@ -155,7 +155,7 @@ const Index = () => {
               suffix="%"
               label="Clientes Satisfeitos"
               sublabel="Resultados garantidos"
-              color="text-cyber-purple"
+              variant="purple"
             />
             <MetricCard 
               icon={<Zap className="w-8 h-8" />}
@@ -163,7 +163,7 @@ const Index = () => {
               suffix="+"
               label="Competências"
               sublabel="Skills especializadas"
-              color="text-cyber-pink"
+              variant="pink"
             />
           </div>
         </div>
@@ -186,7 +186,7 @@ const Index = () => {
       {/* Services Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <GlitchText className="font-vt323 text-cyber-purple text-5xl md:text-6xl mb-6 drop-shadow-neon-purple">
+          <GlitchText intensity="low" className="font-vt323 text-cyber-purple text-5xl md:text-6xl mb-6 drop-shadow-neon-purple">
             Serviços Especializados
           </GlitchText>
           <p className="text-center text-gray-400 text-lg">
@@ -200,35 +200,35 @@ const Index = () => {
             title="Google Tag Manager & API de Conversão"
             description="Estrutura avançada de mensuração para aumentar a qualidade dos leads e otimizar a performance das campanhas com dados precisos."
             highlight="Rastreamento Avançado"
-            color="cyber-neon"
+            variant="neon"
           />
           <ServiceCard 
             icon="📱"
             title="Meta Ads (Facebook & Instagram)"
             description="Desenvolvimento e otimização de campanhas para o melhor ROI possível. Experiência comprovada com mais de R$ 200.000 administrados."
             highlight="+R$ 200k Administrados"
-            color="cyber-blue"
+            variant="blue"
           />
           <ServiceCard 
             icon="🔍"
             title="Google Ads & GA4"
             description="Expertise em campanhas Search, Display, YouTube, Demand Gen e Performance Max. Domínio completo do ecossistema Google."
             highlight="Múltiplas Plataformas"
-            color="cyber-purple"
+            variant="purple"
           />
           <ServiceCard 
             icon="⚙️"
             title="CRM & Integrações"
             description="Especialista em RD Station Marketing e resolução de problemas complexos de integrações entre plataformas e sistemas."
             highlight="RD Station Expert"
-            color="cyber-pink"
+            variant="pink"
           />
         </div>
       </section>
 
       {/* Contact Section */}
       <section id="contato" className="py-24 px-4 max-w-4xl mx-auto text-center relative z-10">
-        <GlitchText className="font-vt323 text-cyber-pink text-5xl md:text-6xl mb-6 drop-shadow-neon-pink">
+        <GlitchText intensity="low" className="font-vt323 text-cyber-pink text-5xl md:text-6xl mb-6 drop-shadow-neon-pink">
           Vamos Conversar
         </GlitchText>
         <p className="text-gray-400 text-lg mb-12">
@@ -292,55 +292,6 @@ const Index = () => {
         </button>
       )}
     </div>
-  );
-};
-
-const MetricCard = ({ icon, number, suffix, label, sublabel, color }: { 
-  icon: React.ReactNode; 
-  number: number; 
-  suffix: string;
-  label: string; 
-  sublabel: string; 
-  color: string;
-}) => {
-  return (
-    <HolographicCard>
-      <div className="text-center">
-        <div className={`${color} mb-3 flex justify-center`}>{icon}</div>
-        <div className={`font-vt323 ${color} text-4xl md:text-5xl mb-2 drop-shadow-neon holographic-text`}>
-          <AnimatedCounter end={number} suffix={suffix} />
-        </div>
-        <div className="text-cyber-text font-semibold mb-1">{label}</div>
-        <div className="text-gray-400 text-sm">{sublabel}</div>
-      </div>
-    </HolographicCard>
-  );
-};
-
-const ServiceCard = ({ icon, title, description, highlight, color }: { 
-  icon: string;
-  title: string; 
-  description: string;
-  highlight: string;
-  color: string;
-}) => {
-  return (
-    <HolographicCard>
-      <div className="flex items-start space-x-6">
-        <div className="text-4xl bg-gradient-to-r from-cyber-neon/10 to-cyber-blue/10 p-4 rounded-full flex-shrink-0 group-hover:bg-gradient-to-r group-hover:from-cyber-neon/20 group-hover:to-cyber-blue/20 transition-colors shadow-neon">
-          {icon}
-        </div>
-        <div className="flex-1">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className={`font-vt323 text-${color} text-2xl holographic-text`}>{title}</h3>
-            <span className={`bg-${color}/20 text-${color} px-3 py-1 rounded-full text-xs font-semibold border border-${color}/30 neon-glow`}>
-              {highlight}
-            </span>
-          </div>
-          <p className="text-gray-300 leading-relaxed text-lg">{description}</p>
-        </div>
-      </div>
-    </HolographicCard>
   );
 };
 
