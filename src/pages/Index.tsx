@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ArrowUp, MessageCircle, Mail, ArrowRight } from 'lucide-react';
+import { ArrowUp, MessageCircle, Mail, ArrowRight, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -34,137 +34,186 @@ const Index = () => {
           }}
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/75" />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <p className="font-vt323 text-cyber-neon text-lg md:text-xl mb-4 animate-glow">
-            // Eu sou Leo Koerich
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
+          <p className="font-vt323 text-cyber-neon text-xl md:text-2xl mb-6 animate-glow">
+            // Especialista em Performance Digital
           </p>
-          <h1 className="font-vt323 text-cyber-neon text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight drop-shadow-neon-lg animate-glow">
-            Marketing Digital<br />
-            e Tráfego Pago
+          <h1 className="font-vt323 text-cyber-neon text-5xl md:text-7xl lg:text-9xl mb-8 leading-tight drop-shadow-neon-lg animate-glow">
+            LEO KOERICH
           </h1>
+          <p className="font-vt323 text-cyber-text text-2xl md:text-3xl mb-10">
+            Marketing Digital & Tráfego Pago
+          </p>
           <button 
             onClick={scrollToContact}
-            className="bg-cyber-neon text-cyber-bg px-8 py-4 rounded-full text-lg font-semibold hover:brightness-110 hover:scale-105 transition-all duration-300 animate-float"
+            className="bg-cyber-neon text-cyber-bg px-10 py-5 rounded-full text-xl font-bold hover:brightness-110 hover:scale-105 transition-all duration-300 animate-float shadow-lg"
           >
-            Vamos Conversar
+            Transformar Meu Negócio
           </button>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <h2 className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-12 text-center drop-shadow-neon">
-          Sobre mim
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <h2 className="font-vt323 text-cyber-neon text-5xl md:text-6xl mb-6 text-center drop-shadow-neon">
+          Quem é Leo Koerich
         </h2>
+        <p className="text-center text-gray-400 text-lg mb-16 max-w-3xl mx-auto">
+          Transformando negócios através de estratégias digitais de alta performance
+        </p>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="space-y-4">
-            <p className="text-cyber-text leading-relaxed">
-              Com grande dedicação e paixão, trabalho com marketing e tráfego pago. Tenho uma empresa MEI e sou eu mesmo quem presta todos os serviços. Acredito firmemente no poder do marketing digital para transformar negócios. Minha experiência me permite criar estratégias eficazes que impulsionam o crescimento e a visibilidade das empresas.
-            </p>
-            <p className="text-cyber-text leading-relaxed">
-              A cada campanha, busco entender profundamente as necessidades dos meus clientes, garantindo resultados que superam as expectativas.
-            </p>
+        <div className="grid md:grid-cols-2 gap-12 mb-20">
+          <div className="space-y-6">
+            <div className="bg-cyber-card border border-gray-700 rounded-lg p-8 hover:border-cyber-neon transition-all duration-300">
+              <h3 className="font-vt323 text-cyber-neon text-2xl mb-4">Minha Missão</h3>
+              <p className="text-cyber-text leading-relaxed text-lg">
+                Trabalho com dedicação e paixão no universo do marketing digital e tráfego pago. Como MEI, presto todos os serviços pessoalmente, garantindo total controle de qualidade e proximidade com cada cliente.
+              </p>
+            </div>
+            <div className="bg-cyber-card border border-gray-700 rounded-lg p-8 hover:border-cyber-neon transition-all duration-300">
+              <h3 className="font-vt323 text-cyber-neon text-2xl mb-4">Metodologia</h3>
+              <p className="text-cyber-text leading-relaxed text-lg">
+                Cada campanha é desenvolvida com análise profunda das necessidades do cliente, criando estratégias personalizadas que superam expectativas e geram resultados mensuráveis.
+              </p>
+            </div>
           </div>
-          <div className="space-y-4">
-            <p className="text-cyber-text leading-relaxed">
-              A gestão de tráfego pago é uma arte que domino com precisão, otimizando investimentos e maximizando retornos. Minha empresa é um reflexo do meu compromisso com a excelência e a inovação.
-            </p>
-            <p className="text-cyber-text leading-relaxed">
-              Cada projeto é uma oportunidade de aprender e evoluir, sempre com o objetivo de entregar o melhor. A satisfação dos meus clientes é a minha maior recompensa, e é isso que me motiva a continuar aprimorando minhas habilidades.
-            </p>
+          <div className="space-y-6">
+            <div className="bg-cyber-card border border-gray-700 rounded-lg p-8 hover:border-cyber-neon transition-all duration-300">
+              <h3 className="font-vt323 text-cyber-neon text-2xl mb-4">Expertise</h3>
+              <p className="text-cyber-text leading-relaxed text-lg">
+                Domino a arte da gestão de tráfego pago com precisão, otimizando investimentos e maximizando retornos. Minha empresa reflete meu compromisso com excelência e inovação.
+              </p>
+            </div>
+            <div className="bg-cyber-card border border-gray-700 rounded-lg p-8 hover:border-cyber-neon transition-all duration-300">
+              <h3 className="font-vt323 text-cyber-neon text-2xl mb-4">Filosofia</h3>
+              <p className="text-cyber-text leading-relaxed text-lg">
+                Cada projeto é uma oportunidade de evoluir. A satisfação dos clientes é minha maior recompensa e me motiva a continuar aprimorando no dinâmico mundo do marketing digital.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <div className="text-center">
-            <div className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-2 drop-shadow-neon">1+</div>
-            <div className="text-sm text-gray-400">Ano de experiência</div>
-          </div>
-          <div className="text-center">
-            <div className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-2 drop-shadow-neon">17+</div>
-            <div className="text-sm text-gray-400">Empresas Atendidas</div>
-          </div>
-          <div className="text-center">
-            <div className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-2 drop-shadow-neon">100%</div>
-            <div className="text-sm text-gray-400">Clientes Satisfeitos</div>
-          </div>
-          <div className="text-center">
-            <div className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-2 drop-shadow-neon">10+</div>
-            <div className="text-sm text-gray-400">Soft Skill's</div>
+        {/* Enhanced Metrics */}
+        <div className="text-center mb-12">
+          <h3 className="font-vt323 text-cyber-neon text-3xl mb-8">Resultados Comprovados</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <MetricCard 
+              icon={<TrendingUp className="w-8 h-8" />}
+              number="1+"
+              label="Ano de Experiência"
+              sublabel="Em crescimento constante"
+            />
+            <MetricCard 
+              icon={<Users className="w-8 h-8" />}
+              number="17+"
+              label="Empresas Atendidas"
+              sublabel="Diversos segmentos"
+            />
+            <MetricCard 
+              icon={<Target className="w-8 h-8" />}
+              number="100%"
+              label="Clientes Satisfeitos"
+              sublabel="Resultados garantidos"
+            />
+            <MetricCard 
+              icon={<Zap className="w-8 h-8" />}
+              number="10+"
+              label="Competências"
+              sublabel="Skills especializadas"
+            />
           </div>
         </div>
 
         {/* Community Badge */}
-        <div className="text-center">
+        <div className="text-center bg-cyber-card border border-gray-700 rounded-lg p-8 max-w-md mx-auto hover:border-cyber-neon transition-all duration-300">
           <img 
             src="/lovable-uploads/6e6550ff-7eed-4600-8b0d-3b6184f7e947.png" 
             alt="Comunidade Sobral" 
-            className="w-16 h-16 mx-auto mb-4"
+            className="w-20 h-20 mx-auto mb-4"
           />
-          <p className="text-cyber-text">Membro da Comunidade Sobral de Tráfego</p>
+          <h4 className="font-vt323 text-cyber-neon text-xl mb-2">Membro Ativo</h4>
+          <p className="text-cyber-text">Comunidade Sobral de Tráfego</p>
+          <p className="text-gray-400 text-sm mt-2">Networking e aprendizado contínuo</p>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <h2 className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-4 text-center drop-shadow-neon">
-          Serviços
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <h2 className="font-vt323 text-cyber-neon text-5xl md:text-6xl mb-6 text-center drop-shadow-neon">
+          Serviços Especializados
         </h2>
-        <p className="text-center text-gray-400 mb-12">As principais Skill's</p>
+        <p className="text-center text-gray-400 text-lg mb-16">
+          Soluções completas para maximizar seu ROI digital
+        </p>
         
         <div className="grid md:grid-cols-2 gap-8">
           <ServiceCard 
-            title="Google Tag Manager e API de Conversão"
-            description="Desenvolvendo a melhor estrutura para mensuração e aumento de qualidade de leads."
+            icon="🎯"
+            title="Google Tag Manager & API de Conversão"
+            description="Estrutura avançada de mensuração para aumentar a qualidade dos leads e otimizar a performance das campanhas com dados precisos."
+            highlight="Rastreamento Avançado"
           />
           <ServiceCard 
-            title="Meta Ads"
-            description="Desenvolvimento e otimização de campanhas para o melhor ROI possível, mais de R$ 200.000,00 administrados."
+            icon="📱"
+            title="Meta Ads (Facebook & Instagram)"
+            description="Desenvolvimento e otimização de campanhas para o melhor ROI possível. Experiência comprovada com mais de R$ 200.000 administrados."
+            highlight="+R$ 200k Administrados"
           />
           <ServiceCard 
-            title="Google Ads e GA4"
-            description="Vasta experiência em desenvolver e otimizar campanhas na maioria das categorias do Google, como Display, YouTube, Demand Gen e mais..."
+            icon="🔍"
+            title="Google Ads & GA4"
+            description="Expertise em campanhas Search, Display, YouTube, Demand Gen e Performance Max. Domínio completo do ecossistema Google."
+            highlight="Múltiplas Plataformas"
           />
           <ServiceCard 
-            title="CRM e Integrações"
-            description="Especialista em RD Station Marketing, assim como resolução de problemas de integrações"
+            icon="⚙️"
+            title="CRM & Integrações"
+            description="Especialista em RD Station Marketing e resolução de problemas complexos de integrações entre plataformas e sistemas."
+            highlight="RD Station Expert"
           />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-20 px-4 max-w-4xl mx-auto text-center">
-        <h2 className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-12 drop-shadow-neon">
-          Contato
+      <section id="contato" className="py-24 px-4 max-w-4xl mx-auto text-center">
+        <h2 className="font-vt323 text-cyber-neon text-5xl md:text-6xl mb-6 drop-shadow-neon">
+          Vamos Conversar
         </h2>
+        <p className="text-gray-400 text-lg mb-12">
+          Pronto para transformar seus resultados digitais? Entre em contato!
+        </p>
         
-        <div className="flex flex-col space-y-6 items-center">
+        <div className="grid md:grid-cols-2 gap-6">
           <a 
             href="https://wa.me/5547988892838" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center space-x-4 bg-cyber-card border border-gray-700 p-6 rounded-lg hover:border-cyber-neon transition-all duration-300 hover:-translate-y-1 w-full max-w-md"
+            className="flex items-center space-x-6 bg-cyber-card border border-gray-700 p-8 rounded-lg hover:border-cyber-neon transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group"
           >
-            <MessageCircle className="text-cyber-neon w-8 h-8" />
+            <div className="bg-green-500 p-4 rounded-full group-hover:scale-110 transition-transform">
+              <MessageCircle className="text-white w-8 h-8" />
+            </div>
             <div className="text-left">
-              <div className="text-cyber-neon font-semibold">WhatsApp</div>
-              <div className="text-cyber-text">+55 47 98889-2838</div>
+              <div className="font-vt323 text-cyber-neon text-xl mb-1">WhatsApp</div>
+              <div className="text-cyber-text text-lg font-semibold">+55 47 98889-2838</div>
+              <div className="text-gray-400 text-sm">Resposta rápida garantida</div>
             </div>
           </a>
           
           <a 
             href="mailto:Leonardo.koerich@hotmail.com"
-            className="flex items-center space-x-4 bg-cyber-card border border-gray-700 p-6 rounded-lg hover:border-cyber-neon transition-all duration-300 hover:-translate-y-1 w-full max-w-md"
+            className="flex items-center space-x-6 bg-cyber-card border border-gray-700 p-8 rounded-lg hover:border-cyber-neon transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group"
           >
-            <Mail className="text-cyber-neon w-8 h-8" />
+            <div className="bg-cyber-neon p-4 rounded-full group-hover:scale-110 transition-transform">
+              <Mail className="text-cyber-bg w-8 h-8" />
+            </div>
             <div className="text-left">
-              <div className="text-cyber-neon font-semibold">Email</div>
-              <div className="text-cyber-text">Leonardo.koerich@hotmail.com</div>
+              <div className="font-vt323 text-cyber-neon text-xl mb-1">Email</div>
+              <div className="text-cyber-text text-lg font-semibold">Leonardo.koerich@hotmail.com</div>
+              <div className="text-gray-400 text-sm">Para propostas detalhadas</div>
             </div>
           </a>
         </div>
@@ -175,34 +224,60 @@ const Index = () => {
         href="https://wa.me/5547988892838" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-4 left-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-all duration-300 hover:scale-110"
+        className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl z-50 transition-all duration-300 hover:scale-110 animate-pulse"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-7 h-7" />
       </a>
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
         <button 
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-cyber-card border border-gray-700 hover:border-cyber-neon text-cyber-neon p-4 rounded-full shadow-lg z-50 transition-all duration-300 hover:scale-110"
+          className="fixed bottom-6 right-6 bg-cyber-card border border-gray-700 hover:border-cyber-neon text-cyber-neon p-4 rounded-full shadow-xl z-50 transition-all duration-300 hover:scale-110"
         >
-          <ArrowUp className="w-6 h-6" />
+          <ArrowUp className="w-7 h-7" />
         </button>
       )}
     </div>
   );
 };
 
-const ServiceCard = ({ title, description }: { title: string; description: string }) => {
+const MetricCard = ({ icon, number, label, sublabel }: { 
+  icon: React.ReactNode; 
+  number: string; 
+  label: string; 
+  sublabel: string; 
+}) => {
   return (
-    <div className="bg-cyber-card border border-gray-700 rounded-lg p-6 hover:border-cyber-neon hover:-translate-y-1 transition-all duration-300">
-      <div className="flex items-start space-x-4">
-        <div className="bg-cyber-neon rounded-full p-2 flex-shrink-0">
-          <ArrowRight className="w-4 h-4 text-cyber-bg" />
+    <div className="bg-cyber-card border border-gray-700 rounded-lg p-6 hover:border-cyber-neon hover:-translate-y-1 transition-all duration-300 text-center">
+      <div className="text-cyber-neon mb-3 flex justify-center">{icon}</div>
+      <div className="font-vt323 text-cyber-neon text-4xl md:text-5xl mb-2 drop-shadow-neon">{number}</div>
+      <div className="text-cyber-text font-semibold mb-1">{label}</div>
+      <div className="text-gray-400 text-sm">{sublabel}</div>
+    </div>
+  );
+};
+
+const ServiceCard = ({ icon, title, description, highlight }: { 
+  icon: string;
+  title: string; 
+  description: string;
+  highlight: string;
+}) => {
+  return (
+    <div className="bg-cyber-card border border-gray-700 rounded-lg p-8 hover:border-cyber-neon hover:-translate-y-2 transition-all duration-300 group">
+      <div className="flex items-start space-x-6">
+        <div className="text-4xl bg-cyber-neon/10 p-4 rounded-full flex-shrink-0 group-hover:bg-cyber-neon/20 transition-colors">
+          {icon}
         </div>
-        <div>
-          <h3 className="font-vt323 text-cyber-text text-xl mb-2">{title}</h3>
-          <p className="text-gray-400 leading-relaxed">{description}</p>
+        <div className="flex-1">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-vt323 text-cyber-neon text-2xl">{title}</h3>
+            <span className="bg-cyber-neon/20 text-cyber-neon px-3 py-1 rounded-full text-xs font-semibold">
+              {highlight}
+            </span>
+          </div>
+          <p className="text-gray-300 leading-relaxed text-lg">{description}</p>
         </div>
       </div>
     </div>
