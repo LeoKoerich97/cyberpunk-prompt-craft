@@ -93,7 +93,7 @@
 
   /* Custom cyberpunk glow effects */
   .glow-text {
-    text-shadow: 0 0 5px #7FFF00, 0 0 10px #7FFF00, 0 0 15px #7FFF00;
+    text-shadow: 0 0 5px #00D9FF, 0 0 10px #00D9FF, 0 0 15px #00D9FF;
   }
 
   /* Enhanced neon effects */
@@ -148,17 +148,16 @@
     100% { background-position: 20px 20px; }
   }
 
-  /* Fixed holographic text effect */
+  /* Fixed and optimized holographic text effect */
   .holographic-text {
     background: linear-gradient(45deg, #7FFF00, #00D9FF, #B347D9, #FF0080);
-    background-size: 400% 400%;
-    animation: holographic 4s ease-in-out infinite;
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    /* Fallback for browsers that don't support background-clip */
-    background-color: #7FFF00;
     -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    animation: holographic-scroll 4s ease-in-out infinite;
   }
 
   /* Fallback for unsupported browsers */
@@ -166,7 +165,14 @@
     .holographic-text {
       color: #7FFF00;
       text-shadow: 0 0 10px #7FFF00;
+      background: none;
     }
+  }
+
+  @keyframes holographic-scroll {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   /* Scrollbar styling for cyberpunk theme */

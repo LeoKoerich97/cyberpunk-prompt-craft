@@ -92,10 +92,10 @@ export default {
 				},
 				'glitch': {
 					'0%': { transform: 'translate(0)' },
-					'20%': { transform: 'translate(-2px, 2px)' },
-					'40%': { transform: 'translate(-2px, -2px)' },
-					'60%': { transform: 'translate(2px, 2px)' },
-					'80%': { transform: 'translate(2px, -2px)' },
+					'20%': { transform: 'translate(-1px, 1px)' },
+					'40%': { transform: 'translate(-1px, -1px)' },
+					'60%': { transform: 'translate(1px, 1px)' },
+					'80%': { transform: 'translate(1px, -1px)' },
 					'100%': { transform: 'translate(0)' }
 				},
 				'float': {
@@ -160,7 +160,7 @@ export default {
 			},
 			animation: {
 				'glow': 'glow 2s ease-in-out infinite',
-				'glitch': 'glitch 0.3s infinite',
+				'glitch': 'glitch 1.5s infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'matrix-rain': 'matrix-rain 3s linear infinite',
 				'circuit-flow': 'circuit-flow 2s linear infinite',

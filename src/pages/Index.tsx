@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowUp, MessageCircle, Mail, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import MatrixRain from '../components/TechEffects/MatrixRain';
@@ -15,7 +16,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > window.innerHeight);
+      setShowScrollTop(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -88,7 +89,7 @@ const Index = () => {
       <section className="py-24 px-4 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <GlitchText intensity="low" className="font-vt323 text-cyber-blue text-5xl md:text-6xl mb-6 drop-shadow-neon-blue">
-            Quem é Leo Koerich
+            <span className="holographic-text">Quem é Leo Koerich</span>
           </GlitchText>
           <p className="text-center text-gray-400 text-lg max-w-3xl mx-auto">
             Transformando negócios através de estratégias digitais de alta performance
@@ -187,7 +188,7 @@ const Index = () => {
       <section className="py-24 px-4 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <GlitchText intensity="low" className="font-vt323 text-cyber-purple text-5xl md:text-6xl mb-6 drop-shadow-neon-purple">
-            Serviços Especializados
+            <span className="holographic-text">Serviços Especializados</span>
           </GlitchText>
           <p className="text-center text-gray-400 text-lg">
             Soluções completas para maximizar seu ROI digital
@@ -229,7 +230,7 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contato" className="py-24 px-4 max-w-4xl mx-auto text-center relative z-10">
         <GlitchText intensity="low" className="font-vt323 text-cyber-pink text-5xl md:text-6xl mb-6 drop-shadow-neon-pink">
-          Vamos Conversar
+          <span className="holographic-text">Vamos Conversar</span>
         </GlitchText>
         <p className="text-gray-400 text-lg mb-12">
           Pronto para transformar seus resultados digitais? Entre em contato!
@@ -286,7 +287,8 @@ const Index = () => {
       {showScrollTop && (
         <button 
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-cyber-card border border-gray-700 hover:border-cyber-neon text-cyber-neon p-4 rounded-full shadow-xl z-50 transition-all duration-300 hover:scale-110 neon-glow will-change-transform"
+          className="fixed bottom-6 right-6 bg-cyber-card border border-gray-700 hover:border-cyber-neon text-cyber-neon p-4 rounded-full shadow-xl z-50 transition-all duration-300 hover:scale-110 neon-glow will-change-transform opacity-0 animate-fade-in"
+          style={{ opacity: showScrollTop ? 1 : 0 }}
         >
           <ArrowUp className="w-7 h-7" />
         </button>
