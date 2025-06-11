@@ -111,6 +111,69 @@
     text-shadow: 0 0 5px #7FFF00, 0 0 10px #7FFF00, 0 0 15px #7FFF00, 0 0 20px #7FFF00;
   }
 
+  /* Enhanced neon effects */
+  .neon-glow {
+    box-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+
+  .multi-neon-glow {
+    box-shadow: 
+      0 0 5px #7FFF00,
+      0 0 10px #00D9FF,
+      0 0 15px #B347D9,
+      0 0 20px #FF0080;
+  }
+
+  /* Animated border effect */
+  .border-animated {
+    position: relative;
+    background: linear-gradient(45deg, transparent, transparent);
+  }
+
+  .border-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, #7FFF00, #00D9FF, #B347D9, #FF0080, #7FFF00);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    animation: border-run 3s linear infinite;
+  }
+
+  /* Grid pattern background */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(127, 255, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(127, 255, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  @keyframes grid-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
+  }
+
+  /* Holographic text effect */
+  .holographic-text {
+    background: linear-gradient(45deg, #7FFF00, #00D9FF, #B347D9, #FF0080);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographic 3s ease-in-out infinite;
+  }
+
   /* Scrollbar styling for cyberpunk theme */
   ::-webkit-scrollbar {
     width: 8px;
@@ -123,9 +186,29 @@
   ::-webkit-scrollbar-thumb {
     background: #7FFF00;
     border-radius: 4px;
+    box-shadow: 0 0 10px #7FFF00;
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: #9fff33;
+    box-shadow: 0 0 15px #7FFF00;
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .gpu-accelerated {
+    transform: translateZ(0);
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
